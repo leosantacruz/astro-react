@@ -1,0 +1,14 @@
+---
+const pageTitle = "Multi-frameworks";
+
+import ComponenteAstro from "../components/ComponenteAstro.astro";
+import ComponenteReact from "../components/ComponenteReact.tsx";
+---
+
+<div class="container m-auto">
+  <h1 class="text-4xl text-center my-10">{pageTitle}</h1>
+  <div class="grid grid-cols-2 gap-10">
+    <ComponenteAstro title="Hecho con Astro" />
+    <ComponenteReact title="Hecho con React" client:load />
+  </div>
+</div>
